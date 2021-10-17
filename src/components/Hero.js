@@ -3,35 +3,22 @@ import {Container} from 'react-bootstrap'
 import "../styles/main.css";
 
 const Hero = () => {
-  const [title, setTitle] = useState();
-
-  const startTimer = () => {
-    setInterval(() => {
-      setTitle(changeTitles());
-    }, 3000)
-  }
-
-  const changeTitles = () => {
-    let titles = ['Network', 'Software', 'Coffee','Network Automation', 'NetDevOps'];
-    let rndInt = Math.floor(Math.random() * titles.length);
-    if (titles[rndInt] == title) {
-      changeTitles();
-    }
-    else {
-      return titles[rndInt];
-    }
-  }
+  
+  const titles = ['Network', 'Software', 'Coffee','Network Automation', 'NetDevOps'];
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setTitle(changeTitles());
-    startTimer();
+    const interval = setInterval(() => {
+        setIndex(index => index >= titles.length -1  ? 0 : index + 1);
+    }, 2000)
+    return () => clearInterval(interval)
   }, []); 
 
   return (
     <div id="home">
       <Container style={{alignItems:'center',height: "100vh",justifyContent: 'center',display:'flex'}}>
         <div>
-          <h1>Hi! <div className='wave'>👋</div> I'm Brandon, a <strong>{title}</strong> engineer</h1>
+          <h1>Hi <div className='wave'>👋</div> I'm Brandon, a <strong>{titles[index]}</strong> engineer</h1>
         </div>
       </Container>
     </div>
