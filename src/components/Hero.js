@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {Container} from 'react-bootstrap'
-import "../styles/main.css";
 
 const Hero = () => {
   
-  const titles = ['Network', 'Software', 'Coffee','Network Automation', 'NetDevOps'];
+  const titles = ['Network', 'Software', 'Buzzword' , 'Site Reliability', 'Network Automation', '☕', 'NetDevOps'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
