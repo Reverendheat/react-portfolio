@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "auth": {
+      "reactportfoliob46b7e6d": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

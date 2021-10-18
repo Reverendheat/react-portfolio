@@ -23,5 +23,21 @@
         ]
       }
     }
+  },
+  "function": {
+    "clearUsers": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "reactportfoliob46b7e6d",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ]
+    }
   }
 }
