@@ -7,7 +7,7 @@ const About = () => {
     <div id="about">
       <Container style={{alignItems:'center',height: "100vh",justifyContent: 'center',display:'flex'}}>
         <div>
-          <h1>This is an about me section <div className='wave'>👋</div>.</h1>
+          <h1>This is an about me section.</h1>
         </div>
       </Container>
     </div>
