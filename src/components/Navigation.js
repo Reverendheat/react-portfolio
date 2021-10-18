@@ -27,10 +27,12 @@ const Navigation = () => {
     </Nav>
     <Nav>
     {user ? <NavDropdown title={user.username} id="basic-nav-dropdown">
-          <NavDropdown.Item onClick={handleSignOut}>Sign Out</NavDropdown.Item>
-        </NavDropdown> : <Nav.Link>
-        <Link to='/login' style={{ textDecoration: 'none', color: 'white' }}>
-          Log In
+        <NavDropdown.Item href="#profile">Profile</NavDropdown.Item>  
+        <NavDropdown.Item onClick={handleSignOut}>Sign Out</NavDropdown.Item>
+        </NavDropdown> 
+        : <Nav.Link>
+        <Link to='/login' style={{ textDecoration: 'none', color: 'white', }}>
+          <div className='login-button'>Sign In</div>
         </Link>
       </Nav.Link> }
     </Nav>
