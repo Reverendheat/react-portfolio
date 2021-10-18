@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { Auth } from 'aws-amplify';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { UserContext } from '../Context/User';
 
 const Navigation = () => {
+  const {user, setUser} = useContext(UserContext)
+
   return (
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed='top'>
   <Container>
@@ -14,9 +18,12 @@ const Navigation = () => {
       <Nav.Link href="#contact">Contact</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link>
+      {user ? <Nav.Link>
+        {user.username}
+      </Nav.Link> : <Nav.Link href='#login'>
         Log In
-      </Nav.Link>
+      </Nav.Link> }
+
     </Nav>
   </Navbar.Collapse>
   </Container>

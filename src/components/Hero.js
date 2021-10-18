@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Container} from 'react-bootstrap'
+import { UserContext } from '../Context/User'
 
 const Hero = () => {
-  
-  const titles = ['Network', 'Software', 'Buzzword' , 'Site Reliability', 'Network Automation', '☕', 'NetDevOps'];
+  const {user, setUser} = useContext(UserContext)
+ 
+  const titles = ['Network', 'Software', 'Buzzword' , 'Site Reliability', 'Full Stack', 'Network Automation', '☕', 'NetDevOps'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
