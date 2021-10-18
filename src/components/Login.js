@@ -7,27 +7,29 @@ import { Auth } from 'aws-amplify';
 import {Container, Button} from 'react-bootstrap';
 
 import { UserContext } from '../Context/User';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
-  const {user, setUser} = useContext(UserContext);
-
-  const signOut = async () => {
-    setUser(null);
-  }
+  const history = useHistory();
+  const {setUser} = useContext(UserContext);
 
   useEffect(() =>{
     return onAuthUIStateChange(newAuthState => {
-      console.log(newAuthState);
-      newAuthState == 'signedin' ? setUser(Auth.user) : setUser(null);
+      if(newAuthState == 'signedin') {
+        setUser(Auth.user);
+        history.push({
+          pathname: '/'
+        });
+      } else {
+        setUser(null);
+      }
     });
-  })
+  },[])
 
   return (
-    <Container style={{alignItems:'center',height: "100vh",justifyContent: 'center',display:'flex'}}>
-      <h1 style={{textAlign:'center'}}>🤫 This is only for logged in users, like you!</h1>
-      <AmplifySignOut />
-    </Container>
-    )
+    <>
+    </>
+  )
 }
 
 export default withAuthenticator(Login);
