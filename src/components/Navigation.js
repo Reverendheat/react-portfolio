@@ -15,9 +15,9 @@ const Navigation = () => {
   }
 
   return (
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed='top'>
+<Navbar collapseOnSelect expand="lg" bg="white" variant="light" fixed='top'>
   <Container>
-  <Navbar.Brand>Brandon Sharp</Navbar.Brand>
+  <Navbar.Brand>Brandon (Sharp)</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
@@ -32,7 +32,7 @@ const Navigation = () => {
         </NavDropdown> 
         : <Nav.Link>
         <Link to='/login' style={{ textDecoration: 'none', color: 'white', }}>
-          <div className='login-button'>Sign In</div>
+          <div className='login-button' style={{color:'black'}}>Sign In</div>
         </Link>
       </Nav.Link> }
     </Nav>
