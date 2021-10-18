@@ -6,15 +6,6 @@ import { UserContext } from '../Context/User';
 const Navigation = () => {
   const {user, setUser} = useContext(UserContext)
 
-  const signOut = async () => {
-    try {
-      await Auth.signOut();
-    } catch(e) {
-      console.log(e);
-    }
-    setUser(null);
-  }
-
   return (
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed='top'>
   <Container>
@@ -27,8 +18,8 @@ const Navigation = () => {
       <Nav.Link href="#contact">Contact</Nav.Link>
     </Nav>
     <Nav>
-      {user ? <Nav.Link href=''>
-        Log Out
+      {user ? <Nav.Link>
+        {user.username}
       </Nav.Link> : <Nav.Link href='#login'>
         Log In
       </Nav.Link> }

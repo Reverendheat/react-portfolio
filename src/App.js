@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation";
 import Hero from './components/Hero';
 import About from './components/About';
 import Contact from './components/Contact';
-import SignIn from "./components/SignIn";
+import Login from "./components/Login";
 
 import { UserContext } from "./Context/User";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,7 +20,9 @@ function App() {
         <Hero />
         <About />
         <Contact />
-        <SignIn />
+        <div id='login'>
+          <Login />
+        </div>
       </UserContext.Provider>
     </>
   );
