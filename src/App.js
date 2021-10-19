@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Contact from './components/Contact';
 import Login from "./components/Login";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -23,6 +25,8 @@ function App() {
               <Navigation />
               <Hero />
               <About />
+              <Experience />
+              <Skills />
               <Contact />
               {user ? <Profile /> : <></>}
             </Route>
