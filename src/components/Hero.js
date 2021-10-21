@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Container} from 'react-bootstrap'
-import { UserContext } from '../Context/User'
+// import { UserContext } from '../Context/User'
 
 const Hero = () => {
  

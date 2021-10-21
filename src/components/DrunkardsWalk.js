@@ -95,7 +95,7 @@ const DrunkardsWalk = () => {
         case 3:
           return "E"
         case 4:
-          return "🗻"
+          return "W"
       }
     }
 
@@ -110,7 +110,7 @@ const DrunkardsWalk = () => {
         case "E":
           wallMap[currentPOS.y][currentPOS.x+1] === undefined ? takeStep() : updateMap(currentPOS.x+1, currentPOS.y);
           break;
-        case "🗻":
+        case "W":
           wallMap[currentPOS.y][currentPOS.x-1] === undefined ? takeStep() : updateMap(currentPOS.x-1, currentPOS.y);
           break;
       }
