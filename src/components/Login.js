@@ -1,10 +1,9 @@
 import React, {useContext, useEffect} from 'react'
 
 import { onAuthUIStateChange } from '@aws-amplify/ui-components'
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import { Auth } from 'aws-amplify';
 
-import {Container, Button} from 'react-bootstrap';
 
 import { UserContext } from '../Context/User';
 import { useHistory } from 'react-router-dom';

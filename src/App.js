@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Profile from "./components/Profile";
+import DrunkardsWalk from "./components/DrunkardsWalk";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { UserContext } from "./Context/User";
@@ -20,19 +21,22 @@ function App() {
   return (
       <Router>
         <UserContext.Provider value={{ user, setUser }}>
+          <Navigation />
           <Switch>
-            <Route exact path="/">
-              <Navigation />
+            <Route exact path="/">  
               <Hero />
               <About />
               <Experience />
               <Skills />
               <Contact />
-              {user ? <Profile /> : <></>}
+              {/* {user ? <Profile /> : <></>} */}
             </Route>
-            <Route path='/login'>
+            <Route path='/drunkardswalk'>
+              <DrunkardsWalk />
+            </Route>
+            {/* <Route path='/login'>
               <Login />
-            </Route>
+            </Route> */}
           </Switch>
         </UserContext.Provider>
       </Router>
