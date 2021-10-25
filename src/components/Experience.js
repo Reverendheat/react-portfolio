@@ -1,11 +1,10 @@
-import React from 'react'
-
 import { Container } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import {FaNetworkWired} from 'react-icons/fa';
 import {FaFlagCheckered} from 'react-icons/fa';
 import {BsCodeSlash} from 'react-icons/bs';
 import {SiAutodesk} from 'react-icons/si';
+
 import 'react-vertical-timeline-component/style.min.css';
 
 
@@ -16,12 +15,12 @@ const Experience = () => {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2008 - 2011"
+            date="March 2008 - October 2011"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
             icon={<FaNetworkWired />}
           >
             <h3 className="vertical-timeline-element-title">Network Technician</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI</h4>
+            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
             <p>
             <br /><strong>O</strong>nsite desktop support for clients.
             <br /><strong>T</strong>roubleshooting and configuring Windows desktop and server environments.
@@ -30,12 +29,12 @@ const Experience = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2011 - 2014"
+            date="October 2011 - October 2014"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
             icon={<FaNetworkWired />}
           >
             <h3 className="vertical-timeline-element-title">Network Technician II</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI</h4>
+            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
             <p>
             <br /><strong>M</strong>anaging NT1 ticket queues and prioritizing workload.
             <br /><strong>T</strong>roubleshooting and configuring various email servers such as Microsoft Exchange/G Suite/Zimbra.
@@ -44,12 +43,12 @@ const Experience = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2014 - 2020"
+            date="October 2014 - Febuary 2020"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
             icon={<BsCodeSlash />}
           >
             <h3 className="vertical-timeline-element-title">Network Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI</h4>
+            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
             <p>
             <br/><strong>P</strong>roviding firewall, routing, and switching support for clients ranging from 30-1200 employees.
             <br/><strong>A</strong>dvising clients on purchasing and best practices.
@@ -64,8 +63,8 @@ const Experience = () => {
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
             icon={<BsCodeSlash />}
           >
-            <h3 className="vertical-timeline-element-title">Senior Network Administrator</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI</h4>
+            <h3 className="vertical-timeline-element-title">Sr. Network Administrator</h3>
+            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LLamasoft)</strong></h4>
             <p>
             <br /><strong>P</strong>rovided network and systems design for future and current projects. 
             <br /><strong>D</strong>esigned, planned, and migrated global on-prem and datacenter infrastructure to AWS.
@@ -79,8 +78,8 @@ const Experience = () => {
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
             icon={<SiAutodesk />}
           >
-            <h3 className="vertical-timeline-element-title">Senior NetDevOps Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Novi, MI</h4>
+            <h3 className="vertical-timeline-element-title">Sr. NetDevOps Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Novi, MI <strong>(Autodesk)</strong></h4>
             <p>
             <br /><strong>I</strong>n process of converting Autodesks Global Network to IAC/GitOps model.
             <br /><strong>D</strong>evelop and deploy automation tools to help IAAS employees with their daily tasks.
