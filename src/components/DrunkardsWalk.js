@@ -4,13 +4,13 @@ import { Container, Table } from 'react-bootstrap'
 
 const DrunkardsWalk = () => {
 
-  let floorTiles = 0;
 
   let currentPOS = {
     x: 0,
     y: 0
   };
 
+  let floorTiles = 0; 
   const [floorCount, setFloorCount] = useState(150);
 
   const [wallMap, setWallMap] = useState([
@@ -64,6 +64,7 @@ const DrunkardsWalk = () => {
     }
 
     const updateMap = (x,y) => {
+      console.log(floorTiles);
       let updatedMap = [...wallMap]
       if (updatedMap[y][x] === "🗻") {
         floorTiles++

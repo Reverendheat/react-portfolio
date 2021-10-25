@@ -18,9 +18,7 @@ function App() {
           <Switch>
             <Route exact path="/">  
               <Hero />
-              <About />
               <Experience />
-              <Skills />
               <Contact />
             </Route>
             <Route path='/drunkardswalk'>
