@@ -1,9 +1,8 @@
 import Navigation from "./components/Navigation";
 import Hero from './components/Hero';
-import About from './components/About';
+import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Experience from "./components/Experience";
-import Skills from "./components/Skills";
 import DrunkardsWalk from "./components/DrunkardsWalk";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
