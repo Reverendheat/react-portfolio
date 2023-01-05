@@ -1,6 +1,5 @@
 import Navigation from "./components/Navigation";
 import Hero from './components/Hero';
-import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Experience from "./components/Experience";
 import DrunkardsWalk from "./components/DrunkardsWalk";

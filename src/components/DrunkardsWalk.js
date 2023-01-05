@@ -42,6 +42,7 @@ const DrunkardsWalk = () => {
           {wallMap.map((xitem,xindex) => {
             return <tr key={xindex}>{xitem.map((yitem,yindex) => {
               let bgColor;
+              // eslint-disable-next-line default-case
               switch(yitem) {
                 case ("🗻"):
                   bgColor = "Gray"
@@ -88,6 +89,7 @@ const DrunkardsWalk = () => {
     }
 
     const chooseDirection = () => {
+      // eslint-disable-next-line default-case
       switch(Math.floor(Math.random() * (4 - 1 + 1) + 1)) {
         case 1:
           return "N"
@@ -101,6 +103,7 @@ const DrunkardsWalk = () => {
     }
 
     const takeStep = () => {
+      // eslint-disable-next-line default-case
       switch(chooseDirection()) {
         case "N":
           wallMap[currentPOS.y - 1] === undefined ? takeStep() : updateMap(currentPOS.x, currentPOS.y-1);
