@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@amplify-config": [
+        "src/aws-exports.js",
+        "src/aws-exports.example.js"
+      ]
+    }
+  },
+  "include": ["src"]
+}
