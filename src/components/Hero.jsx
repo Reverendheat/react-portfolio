@@ -3,7 +3,7 @@ import {Container} from 'react-bootstrap'
 
 const Hero = () => {
  
-  const titles = ['Software Engineer', '☕ Roaster', 'Tinkerer'];
+  const titles = ['Software Engineer', '☕ Roaster', 'Jack of All Trades'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

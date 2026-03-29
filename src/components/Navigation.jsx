@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 
 const Navigation = () => {
@@ -13,11 +13,6 @@ const Navigation = () => {
               <Nav.Link href="/#home">Home</Nav.Link>
               <Nav.Link href="/#experience">Experience</Nav.Link>
               <Nav.Link href="/#contact">Contact</Nav.Link>
-            </Nav>
-            <Nav>
-              <NavDropdown title="Extras" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/drunkardswalk">Drunkards Walk</NavDropdown.Item>  
-              </NavDropdown> 
             </Nav>
           </Navbar.Collapse>
           </Container>

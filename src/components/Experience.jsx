@@ -1,98 +1,129 @@
-import { Container } from 'react-bootstrap'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import {FaNetworkWired} from 'react-icons/fa';
-import {FaFlagCheckered} from 'react-icons/fa';
-import {BsCodeSlash} from 'react-icons/bs';
-import {SiAutodesk} from 'react-icons/si';
+import { Container } from 'react-bootstrap';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { FaNetworkWired, FaFlagCheckered } from 'react-icons/fa';
+import { SiAutodesk } from 'react-icons/si';
 
 import 'react-vertical-timeline-component/style.min.css';
 
+const iconStyle = { background: 'rgb(255, 255, 255)', color: '#fffff' };
+
+const ROLES = [
+  {
+    date: 'March 2008 – February 2020',
+    title: 'Network Consultant',
+    location: 'Ann Arbor, MI',
+    org: 'LTI Information Technology',
+    Icon: FaNetworkWired,
+    bullets: [
+      'Assisted clients with API development, application development, project planning, IT budgeting, network design, and cloud strategies.',
+    ],
+  },
+  {
+    date: 'February 2020 – November 2020',
+    title: 'Senior Network Administrator',
+    location: 'Ann Arbor, MI',
+    org: 'LLamasoft (now Coupa)',
+    iconSrc: '/images/llamasoft-logo.png',
+    bullets: [
+      'Created “VMOD” (Virtual Machine on Demand), a full-stack C# MVC application giving support teams tools to manage VMs from custom AMIs for troubleshooting.',
+      'Built tooling to parse and migrate hundreds of GB of engineering data to AWS S3.',
+    ],
+  },
+  {
+    date: 'January 2021 – June 2021',
+    title: 'Senior NetDevOps Engineer',
+    location: 'Novi, MI',
+    org: 'Autodesk (Network Engineering)',
+    Icon: SiAutodesk,
+    bullets: [
+      'Worked with the team to build a network abstraction library so network engineering could interact with the Autodesk network programmatically.',
+      'Supported network management LAMP (Perl), implementing features and bug fixes for network engineering teams.',
+    ],
+  },
+  {
+    date: 'June 2021 – March 2023',
+    title: 'Senior Software Engineer',
+    location: 'Novi, MI',
+    org: 'Autodesk (Productivity & App Engineering)',
+    Icon: SiAutodesk,
+    bullets: [
+      'Created an internal ChatGPT-style experience on Azure OpenAI for employees and contractors (18k+) with secure AI assistant access, chat history, and user settings via Microsoft Graph.',
+      'Created “J2F,” an automated tool to convert Juniper SRX firewall configs to Fortinet FortiGate.',
+      'Built an ETL pipeline for network device state so a single SNOW entry could update logging, config backup, NAC, and DCIM.',
+    ],
+  },
+  {
+    date: 'March 2023 – April 2025',
+    title: 'Principal Software Engineer',
+    location: 'Novi, MI',
+    org: 'Autodesk (Productivity & AI Services)',
+    Icon: SiAutodesk,
+    bullets: [
+      'Built and maintained a large-scale pub/sub ETL pipeline for sales interactions using LLMs for analysis, feeding real-time insight from calls and chats into Salesforce dashboards.',
+      'Designed and implemented the backend for Autodesk’s internal chatbot with OpenAI and LangChain for custom LLM tool use.',
+      'Integrated Confluence, JIRA, SharePoint, external REST APIs, and file uploads for retrieval-augmented generation (RAG).',
+      'Created Firewall Policy Dashboard: ingested Autodesk firewall data with Query Builder and NLP search for security visibility.',
+    ],
+  },
+  {
+    date: 'April 2025 – Present',
+    title: 'Senior Principal Software Engineer',
+    location: 'Novi, MI',
+    org: 'Autodesk (Productivity & AI Services)',
+    Icon: SiAutodesk,
+    bullets: [
+      'Architected and delivered an internal AI agent / developer platform: shared APIs, CLI, templates, and telemetry so teams can build, deploy, and operate enterprise agents.',
+      'Built the core Python monorepo and AWS control plane for agent lifecycle on FastAPI (ECS Fargate), ALB/WAF, DynamoDB, S3, SSM, EventBridge, Step Functions, Lambda, and CodeBuild.',
+      'Developed the platform CLI, MCP integrations, telemetry libraries, and agent template repos to standardize onboarding from prototype to production.',
+      'Integrated Bedrock AgentCore, Azure AD / Microsoft Graph, and GitHub Enterprise webhooks for runtime, identity-aware access, and enterprise connectivity.',
+      'Implemented cross-cutting observability via shared telemetry libraries and middleware.',
+      'Established secure patterns: JWT validation, enterprise auth, and least-privilege boundaries for internal AI systems.',
+    ],
+  },
+];
 
 const Experience = () => {
   return (
-    <div id='experience'>
-      <Container style={{paddingTop: "50px"}}>
+    <div id="experience">
+      <Container style={{ paddingTop: '50px' }}>
         <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="March 2008 - October 2011"
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<FaNetworkWired />}
-          >
-            <h3 className="vertical-timeline-element-title">Network Technician</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
-            <p>
-            <br /><strong>O</strong>nsite desktop support for clients.
-            <br /><strong>T</strong>roubleshooting and configuring Windows desktop and server environments.
-            <br /><strong>T</strong>roubleshooting and configuring Microsoft Active Directory Domain environments.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="October 2011 - October 2014"
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<FaNetworkWired />}
-          >
-            <h3 className="vertical-timeline-element-title">Network Technician II</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
-            <p>
-            <br /><strong>M</strong>anaging NT1 ticket queues and prioritizing workload.
-            <br /><strong>T</strong>roubleshooting and configuring various email servers such as Microsoft Exchange/G Suite/Zimbra.
-            <br /><strong>T</strong>roubleshooting and configure new physical & virtual server environments using Hyper-V and VMWare.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="October 2014 - Febuary 2020"
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<BsCodeSlash />}
-          >
-            <h3 className="vertical-timeline-element-title">Network Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LTI-IT)</strong></h4>
-            <p>
-            <br/><strong>P</strong>roviding firewall, routing, and switching support for clients ranging from 30-1200 employees.
-            <br/><strong>A</strong>dvising clients on purchasing and best practices.
-            <br/><strong>L</strong>evel 3 engineer for LTI-IT technicians.
-            <br/><strong>D</strong>eveloping internal web applications and dashboards.
-            <br/><strong>W</strong>riting and conducting technical lab interviews for new candidates.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="February 2020 - November 2020"
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<BsCodeSlash />}
-          >
-            <h3 className="vertical-timeline-element-title">Sr. Network Administrator</h3>
-            <h4 className="vertical-timeline-element-subtitle">Ann Arbor, MI <strong>(LLamasoft)</strong></h4>
-            <p>
-            <br /><strong>P</strong>rovided network and systems design for future and current projects. 
-            <br /><strong>D</strong>esigned, planned, and migrated global on-prem and datacenter infrastructure to AWS.
-            <br /><strong>D</strong>eveloped internal .NET MVC applications & dashboards with to support Systems and Desktop support teams.
-            <br /><strong>S</strong>upported firewall, routing, and switching for LLamasofts global network.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="January 2021 - Present"
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<SiAutodesk />}
-          >
-            <h3 className="vertical-timeline-element-title">Sr. NetDevOps Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Novi, MI <strong>(Autodesk)</strong></h4>
-            <p>
-            <br /><strong>I</strong>n process of converting Autodesks Global Network to IAC/GitOps model.
-            <br /><strong>D</strong>evelop and deploy automation tools to help IAAS employees with their daily tasks.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fffff' }}
-            icon={<FaFlagCheckered />}
-          />
+          {ROLES.map((role) => {
+            let iconNode;
+            if (role.iconSrc) {
+              iconNode = (
+                <img src={role.iconSrc} alt="" />
+              );
+            } else {
+              const Icon = role.Icon;
+              iconNode = <Icon />;
+            }
+            return (
+            <VerticalTimelineElement
+              key={`${role.title}-${role.date}`}
+              className="vertical-timeline-element--work"
+              date={role.date}
+              iconStyle={iconStyle}
+              icon={iconNode}
+            >
+              <h3 className="vertical-timeline-element-title">{role.title}</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                {role.location} <strong>({role.org})</strong>
+              </h4>
+              <ul style={{ marginTop: '0.75rem', marginBottom: 0, paddingLeft: '1.2rem' }}>
+                {role.bullets.map((text, i) => (
+                  <li key={i} style={{ marginBottom: '0.5rem' }}>
+                    {text}
+                  </li>
+                ))}
+              </ul>
+            </VerticalTimelineElement>
+            );
+          })}
+          <VerticalTimelineElement iconStyle={iconStyle} icon={<FaFlagCheckered />} />
         </VerticalTimeline>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
